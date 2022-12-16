@@ -1,0 +1,235 @@
+.navbar {
+    width: 100%;
+    height: 90px;
+    padding: 0 40px;
+    justify-content: space-between;
+
+    .logos {
+        gap: 10px;
+
+        .icon {
+            font-size: 3.1rem;
+            fill: red;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: capitalize;
+            letter-spacing: 3px;
+        }
+    }
+
+    .navbar__item {
+        width: 70%;
+        justify-content: space-between;
+    }
+
+    .search {
+        border: 0.5px solid rgba(0, 0, 0, 0.411);
+        border-radius: 50px;
+        box-sizing: content-box;
+
+        input {
+            padding: 5px 15px;
+            width: 300px;
+            height: 40px;
+            outline: none;
+            border-radius: 50px 0 0 50px;
+        }
+
+        .icon {
+            height: 40px;
+            padding: 0 20px;
+            color: #fff;
+            font-size: 1.2rem;
+            border-left: 0.5px solid rgba(0, 0, 0, 0.411);
+            border-radius: 0 50px 50px 0;
+            box-sizing: content-box;
+            background-color: red;
+
+        }
+    }
+
+    .info {
+        gap: 10px;
+
+        .icon {
+            font-size: 1.5rem;
+        }
+
+        a {
+            font-size: 1.3rem;
+            font-weight: 100;
+        }
+    }
+
+    .social__media {
+        gap: 20px;
+
+        .icon {
+            font-size: 1.7rem;
+            fill: red;
+        }
+    }
+
+    .hamburger {
+        display: none;
+        font-size: 2.5rem;
+        color: red;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hamburger {
+        z-index: 9999;
+        display: inline-block !important;
+        font-size: 2.5rem;
+        color: red;
+    }
+
+    .navbar__item {
+        gap: 10%;
+        top: 90px;
+        padding: 100px 50px;
+        position: absolute;
+        flex-direction: column;
+        justify-content: flex-start !important;
+        width: 101% !important;
+        height: calc(100vh - 90px);
+        transition: left .6s;
+        background-color: rgba(124, 42, 0, 0.712);
+
+        .search {
+
+            input {
+                padding: 5px 30px;
+                width: 20em;
+                height: 60px;
+                font-size: 1.5rem;
+
+                &::placeholder {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .icon {
+                height: 60px;
+                padding: 0 35px;
+                font-size: 2rem;
+            }
+        }
+
+        .info {
+            .icon {
+                font-size: 2.5rem;
+                fill: #fff;
+            }
+
+            a {
+                font-size: 2.3rem;
+                color: #fff;
+            }
+        }
+
+        .social__media {
+            gap: 30px;
+
+            .icon {
+                font-size: 2.5rem;
+                fill: #fff;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar__item {
+        .search {
+
+            input {
+                padding: 5px 25px;
+                width: 16em;
+                height: 50px;
+                font-size: 1rem;
+
+                &::placeholder {
+                    font-size: 1rem;
+                }
+            }
+
+            .icon {
+                height: 50px;
+                padding: 0 25px;
+                font-size: 1.5rem;
+            }
+        }
+
+        .info {
+            .icon {
+                font-size: 2rem;
+                fill: #fff;
+            }
+
+            a {
+                font-size: 1.5rem;
+                color: #fff;
+            }
+        }
+
+        .social__media {
+            .icon {
+                font-size: 2rem;
+                fill: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .navbar__item {
+        .search {
+
+            input {
+                padding: 5px 20px;
+                width: 11em;
+                height: 35px;
+            }
+
+            .icon {
+                height: 35px;
+                padding: 0 18px;
+                font-size: 1.2rem;
+            }
+        }
+
+        .info {
+            .icon {
+                font-size: 1.5rem;
+            }
+
+            a {
+                font-size: 1rem;
+            }
+        }
+
+        .social__media {
+            gap: 15px;
+
+            .icon {
+                font-size: 1.5rem;
+                fill: #fff;
+            }
+        }
+    }
+}
